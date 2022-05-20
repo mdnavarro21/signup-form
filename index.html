@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-Up Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <section id = "design">
         <div id="logo">
-            <img src = "stock-vector-vector-rocket-ship-mobile-icon.jpeg">
+            <img src = "output-onlinepngtools.png">
             <div id="company-name">
                 <p>GODSPEED</p>
             </div>
@@ -45,15 +45,15 @@
                 </div>
                 <div>
                     <label for="phone-number">PHONE NUMBER</label>
-                    <input type="text" id = "phone-number" name = "phone_number">
+                    <input type="tel" id = "phone-number" name = "phone_number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 
                 </div>
-                <div>
+                <div class = "error">
                     <label for="password">PASSWORD</label>
                     <input type="password" id = "password" name = "password">
                 
                 </div>
-                <div>
+                <div class = "error">
                     <label for="confirm-pass">CONFIRM PASSWORD</label>
                     <input type="password" id = "confirm-pass" name = "confirm-pass">
                 
@@ -63,7 +63,7 @@
         
         <div id="form-closure">
             <div class="content">
-                <button type = "submit" form="signup-form">Create Account</button>
+                <button type = "submit" id = "submit-button"form="signup-form">Create Account</button>
                 <p>Already have an account? <a href="">Login</a></p>
             </div>
         </div>

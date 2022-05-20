@@ -23,6 +23,7 @@ section#design {
     background-image: url("elia-pellegrini-C54fuJ5E8YU-unsplash.jpg");
     background-size: cover;
     width: 40vw;
+    height: 100%;
     color: white;
 }
 
@@ -43,6 +44,7 @@ section#design {
     width: auto;
     height: 100%;
     float: left;
+    background-color: transparent;
 }
 
 
@@ -54,6 +56,7 @@ section#design {
 
 #photo-credits {
     position: absolute;
+    left: 10px;
     bottom:0;
 }
 
@@ -74,25 +77,18 @@ section#main {
 }
 
 #signup-hook {
-
-    width: 70%;
+    width: clamp(55ch, 50%, 75ch);
 
     font-size: 1.3rem;
     font-weight:500;
 }
 /*Form Styling*/
-button, input {
-    font-size: 100%;
-    width : 15rem;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 #signup-form{
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     width: 100%;
+    height: 17rem;
 }
 
 #signup-form > .content {
@@ -100,20 +96,70 @@ button, input {
     grid-template-columns: 30% 30%;
     grid-template-rows: repeat(4,4rem);
     column-gap: 2rem;
+
+    width: auto;
+    height: 100%;
 }
 
-label {
-    font-size: 0.8rem;
-    font-family: 'Montserrat', sans-serif;
-}
 #form-header {
+    width: auto;
     grid-area: 1/1/2/3;
     font-weight: 500;
     font-size: 1.3rem;
 }
 
-#signup-form > div {
+#signup-form input {
+    font-size: 90%;
+
+    width : 15rem;
+    height: 1.6rem;
+
+    padding-left: 10px;
+    margin: 0;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-color: #E5E7EB;
+    border-radius: 5px;
+}
+
+#signup-form input:focus {
+    outline: none;
+    border-color: blue;
+    border-width: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+label {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+#signup-form > .content > div {
     display: flex;
     flex-direction: column;
+}
+
+#signup-form > .content > .error input{
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+
+#signup-form > .content > .error::after {
+    content: '⋆Passwords do not match';
+    color: red;
+    font-size: 0.8rem;
+}
+
+#submit-button {
+    background-color: #596D48;
+    color: white;
+
+    width: 12rem;
+    height: 2.5rem;
+
+    border-radius: 5px;
 }
 
