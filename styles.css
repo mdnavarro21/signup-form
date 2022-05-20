@@ -1,3 +1,119 @@
-.logo {
-    font-family: 'Open Sans', sans-serif;
+:root {
+    font-size: 16px;
+    font-family: 'Roboto';
 }
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+a, a:visited, a:active {
+    color: inherit;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+
+/*Design Page Styling*/
+section#design {
+    position: relative;
+    background-image: url("elia-pellegrini-C54fuJ5E8YU-unsplash.jpg");
+    background-size: cover;
+    width: 40vw;
+    color: white;
+}
+
+#logo {
+    position: absolute;
+    top: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 15%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+#logo > img {
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+
+
+#logo > #company-name{
+    font-size: 3rem;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#photo-credits {
+    position: absolute;
+    bottom:0;
+}
+
+/* Content Page Styling */
+section#main {
+    width: 60vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+
+    background-color: #f9fafb;
+}
+
+.content {
+    margin-left: 3rem;
+}
+
+#signup-hook {
+
+    width: 70%;
+
+    font-size: 1.3rem;
+    font-weight:500;
+}
+/*Form Styling*/
+button, input {
+    font-size: 100%;
+    width : 15rem;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#signup-form{
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 100%;
+}
+
+#signup-form > .content {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: repeat(4,4rem);
+    column-gap: 2rem;
+}
+
+label {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+#form-header {
+    grid-area: 1/1/2/3;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#signup-form > div {
+    display: flex;
+    flex-direction: column;
+}
+
